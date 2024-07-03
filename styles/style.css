@@ -1,31 +1,21 @@
-body {
-  font-size: 18px;
-  font-weight: 400;
-  overflow-x: hidden;
-}
-
 .uppercase {
   text-transform: uppercase;
 }
 
 .header {
-  height: 293px;
-  padding: 90px 24px 96px; /*Поправить*/
+  padding: 92px 24px 92px;
 }
 
 .content_header {
   display: flex; /* Распологаю элементы в строку */
-  height: 105px;
-  width: 1052px;
 }
 
 .header__menu {
   display: flex; /* Распологаю элементы списка в строку */
   list-style: circle;
-  margin-left: 26.52px;
-  margin-top: 44px;
-  text-underline-offset: 5px;
-  padding-left: 0; /* Убираю встроенный левый отступ в списке */
+  gap: 32px;
+  margin: 44px 0 0 26.52px;
+  text-underline-offset: 4px;
 }
 
 .main_link {
@@ -34,37 +24,34 @@ body {
 
 .main_list {
   list-style: none; /* Убираю встроенный стиль у элемента списка c текстом 'главная' */
-  margin-right: 13px;
 }
 
 .lots_list {
-  margin-left: -7px;
-  margin-right: 13px;
   letter-spacing: 0.01em;
 }
 
 .auction_list {
-  margin-left: -5px;
   letter-spacing: 0.01em;
 }
 
 .header__logo {
-  width: 135.11px;
+  width: 136px;
   margin-left: 41px;
-  margin-top: 4px;
 }
 
 .address {
   font-style: normal; /* Тег address по умолчанию содержит стиль italic, отключаю его */
   width: 240.52px;
-  height: 98px;
-  text-underline-offset: 5px;
-  letter-spacing: 0.01em;
+  text-underline-offset: 4px;
 }
 
 .address_header {
-  margin-top: 6px;
-  margin-left: 192px;
+  margin: 6px 0 0 192px;
+}
+
+.phone_number,
+.mail {
+  letter-spacing: 0.01em;
 }
 
 .address,
@@ -75,72 +62,64 @@ body {
 }
 
 .cover {
+  padding: 165px 50px 50px 50px;
   width: 1100px;
-  height: 757px;
-  background-image: url(../images/cover.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url(../images/cover.jpg) no-repeat center / cover;
   position: relative; /*Для позиционирования оверлея */
+  z-index: 1;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
 }
 
-.cover__title h1 {
-  height: 355px;
-  width: 1000px;
-  z-index: 1;
+.cover h1 {
   font-weight: 700;
   font-size: 100px;
-  line-height: 115%;
   letter-spacing: 0.3em;
   color: #fff;
   white-space: nowrap;
 }
 
-h1 span {
-  display: inline-block; /* Чтобы можно было задавать отступы */
-}
-
 .aligned-text {
+  line-height: 115%;
   letter-spacing: 0.3em;
-  margin-top: 165px;
-  margin-left: 50px;
 }
 
-.h1_start_letter_spacing {
+.h_start_letter_spacing {
   letter-spacing: 0.6em;
 }
 
 .aligned-text_center {
-  margin-left: 336px;
-  margin-top: 12px;
+  padding-top: 12px;
+  display: block;
+  text-align: center;
 }
 
-.h1_middle_letter_spacing {
+.h_middle_letter_spacing {
   letter-spacing: 0.6em;
 }
 
 .aligned-text_right {
-  margin-left: 633px;
+  padding-left: 584px;
   letter-spacing: 0.6em;
-  margin-top: 5px;
 }
 
-.h1_end_letter_spacing {
+.h_end_letter_spacing {
   letter-spacing: 0.3em;
 }
 
 .cover__description {
-  margin-top: 300px;
-  margin-left: 78px;
+  padding: 128px 0 0 27px;
+}
+
+.letter-in {
+  letter-spacing: 1.1em;
 }
 
 .cover__description h2 {
@@ -164,41 +143,41 @@ h1 span {
   margin-left: 75.5px;
 }
 
-.lots {
-  margin-top: 179px;
-  margin-bottom: 180px;
-  margin-left: 26px;
-  width: 1052px;
-  height: 692px;
-}
-
-.lots h3 {
-  margin-left: 40px;
+.title_section_lots {
   font-weight: 700;
   font-size: 40px;
-  margin-bottom: 27px;
+  padding-left: 40px;
+  padding-bottom: 27px;
+}
+
+.lots {
+  padding: 178px 0 0 24px;
+  padding-top: 178px;
+  padding-left: 24px;
 }
 
 .lots ol {
-  display: flex; /*Элементы списка в строку*/
-  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap; /* Перенос карточки */
   list-style: none;
   flex-grow: 1;
+  gap: 25px;
 }
 
 .card {
-  width: 334px;
+  z-index: 0;
+  min-width: 334px;
+  max-width: 334px;
   height: 563px;
   background-size: cover;
   position: relative; /*Для оверлея */
   background-position: center;
+  padding: 51px 40px 48px 40px;
 }
 
 .card-link {
-  display: block;
   text-decoration: none;
   height: 100%;
-  flex-direction: column;
 }
 
 .card_type_film {
@@ -213,8 +192,16 @@ h1 span {
   background-image: url(../images/card-lot-03.jpg);
 }
 
-.card-link {
-  display: flex; /* Добавил флекс,для управления z-index'ом в .card_simple_text */
+.card_space {
+  display: flex; /* Расставляю параграфы по своим позициям */
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.dots {
+  letter-spacing: 0.12em; /* Стилизую точки, как в макете */
 }
 
 .card_simple_text {
@@ -223,41 +210,29 @@ h1 span {
   z-index: 1; /* Текст выше оверлея */
   line-height: 120%;
   font-size: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
 }
 
 .card_title_text {
   font-weight: 700;
+  color: white;
   font-size: 22px;
   line-height: 120%;
-
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  margin-top: 51px;
-}
-
-.card_film_margin {
-  margin-top: 242px;
-}
-
-.card_picture_margin {
-  margin-top: 95px;
+  text-underline-offset: 3px;
 }
 
 .lots__look-more-link {
-  margin-left: 40px;
-  margin-top: 30px;
+  display: block;
+  padding: 30px 0 0 40px;
   font-weight: 400;
   font-size: 20px;
-  text-underline-offset: 4px;
+  text-underline-offset: 5px;
 }
 
 .about {
-  margin-top: 146px;
-  margin-left: 24px;
+  padding: 183px 0 0 24px;
   width: 1052px;
-  height: 595px;
 }
 
 .about__column {
@@ -279,19 +254,15 @@ h1 span {
   width: 148px;
 }
 
-.about__title h4 {
+.about__title h2 {
   margin-top: 102px;
   font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
 }
 
-.first_paragraph_about {
-  margin-top: 100px;
-  letter-spacing: 0.01em;
-}
-
 .about__text {
+  padding-top: 100px;
   line-height: 120%;
   display: flex;
   flex-direction: column;
@@ -302,12 +273,8 @@ h1 span {
 
 .footer {
   display: flex;
-  justify-content: space-between;
-  margin-top: 147px;
-  margin-left: 50px;
-  width: 1000px;
-  height: 98px;
-  margin-bottom: 88px;
+  gap: 185px;
+  padding: 180px 0 88px 50px;
 }
 
 .footer_menu {
@@ -317,7 +284,7 @@ h1 span {
   text-align: center;
   font-weight: 400;
   font-size: 18px;
-  text-underline-offset: 5px;
+  text-underline-offset: 4px;
 }
 
 .footer__social-list {

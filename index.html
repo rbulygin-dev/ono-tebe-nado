@@ -13,11 +13,11 @@
   <body>
     <header class="header">
       <div class="content_header">
-        <menu class="header__menu">
+        <ul class="header__menu">
           <li class="main_list"><a class="main_link" href="#">главная</a></li>
           <li><a class="lots_list" href="#lots_id">посмотреть лоты</a></li>
           <li><a class="auction_list" href="#about_id">об аукционе</a></li>
-        </menu>
+        </ul>
         <div class="header__logo">
           <a class="header__link"
             ><img
@@ -26,68 +26,65 @@
           /></a>
         </div>
         <address class="address address_header">
-          <span class="phone_number"
-            ><a href="tel:+99995555555">+9 999 555 5555</a></span
-          >
-          <span class="mail"
-            ><a href="mailto:admin@hipolink.net">info@sobaka.ge</a></span
-          >
-          <span>наб. Принсенграхт 263- 265, Амстердам</span>
+          <a class="phone_number" href="tel:+99995555555">+9 999 555 5555</a>
+          <a class="mail" href="mailto:admin@hipolink.net">info@sobaka.ge</a>
+          <p>наб. Принсенграхт 263- 265, Амстердам</p>
         </address>
       </div>
     </header>
     <main>
       <section class="cover">
-        <div class="overlay">
-          <div class="background_cover">
-            <div class="cover__title">
-              <h1 class="uppercase">
-                <span class="aligned-text"
-                  >о<span class="h1_start_letter_spacing">но</span></span
-                ><br />
-                <span class="aligned-text_center"
-                  >те<span class="h1_middle_letter_spacing">бе</span></span
-                ><br />
-                <span class="aligned-text_right"
-                  >н<span class="h1_end_letter_spacing">адо</span></span
-                >
-              </h1>
-            </div>
-            <div class="cover__description">
-              <h2 class="cover__description-text uppercase">
-                Аукцион вещей, в которые никто не верил
-              </h2>
-              <button class="bet-button uppercase">Сделать ставку</button>
-            </div>
-          </div>
+        <div class="overlay"></div>
+
+        <h1 class="uppercase">
+          <span class="aligned-text"
+            >о<span class="h_start_letter_spacing">но</span></span
+          >
+          <span class="aligned-text_center"
+            >те<span class="h_middle_letter_spacing">бе</span></span
+          >
+          <span class="aligned-text_right"
+            >н<span class="h_end_letter_spacing">ад</span>о</span
+          >
+        </h1>
+
+        <div class="cover__description">
+          <h2 class="cover__description-text uppercase">
+            Аукцион вещей, <span class="letter-in">в</span>которые никто не
+            верил
+          </h2>
+          <button type="button" class="bet-button uppercase">
+            Сделать ставку
+          </button>
         </div>
       </section>
       <section class="lots">
-        <h3 class="uppercase" id="lots_id">Лоты</h3>
+        <h2 class="uppercase title_section_lots" id="lots_id">Лоты</h2>
         <div class="lots__card-lit">
-          <ol class="overlay-ol">
+          <ol>
             <li class="card card_type_film">
-              <article>
-                <a class="card-link" href="#">
-                  <p class="card_title_text card_simple_text uppercase">
+              <a class="card-link" href="#">
+                <div class="overlay"></div>
+                <article class="card_space">
+                  <h3 class="card_title_text uppercase">
                     Фильм режиссёра, который бросил киношколу
-                  </p>
-                  <p class="card_simple_text card_film_margin">
+                  </h3>
+                  <p class="card_simple_text">
                     Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
                     ставка, если бы вы не знали, что режиссёр — Пол Томас
                     Андерсон?
                   </p>
-                  <div class="overlay"></div>
-                </a>
-              </article>
+                </article>
+              </a>
             </li>
             <li class="card card_type_book">
-              <article>
-                <a class="card-link" href="#">
-                  <p class="card_title_text card_simple_text uppercase">
+              <a class="card-link" href="#">
+                <div class="overlay"></div>
+                <article class="card_space">
+                  <h3 class="card_title_text uppercase">
                     Книга, где описан один скучный день из жизни рекламного
                     агента
-                  </p>
+                  </h3>
                   <p class="card_simple_text">
                     Объёмом почти в тысячу страниц. Иногда без знаков препинания
                     и с переходами на древнеанглийский. В ней одновременно
@@ -96,31 +93,31 @@
                     эпическую поэму Гомера. Сколько бы вы поставили на «Улисса»
                     Джеймса Джойса?
                   </p>
-                  <div class="overlay"></div>
-                </a>
-              </article>
+                </article>
+              </a>
             </li>
             <li class="card card_type_picture">
-              <article>
-                <a class="card-link" href="#">
-                  <p class="card_title_text card_simple_text uppercase">
+              <a class="card-link" href="#">
+                <div class="overlay"></div>
+                <article class="card_space">
+                  <h3 class="card_title_text uppercase">
                     Картина, которую повторит даже 5-летний сын маминой подруги
-                  </p>
-                  <p class="card_simple_text card_picture_margin">
+                  </h3>
+                  <p class="card_simple_text">
                     Ну действительно, там линия, тут кружочек, а здесь и вовсе
                     что-то похожее на инфузорию-туфельку. Никаких полей, лесов,
-                    котиков... Сколько бы вы на такое поставили, если бы не
-                    знали, что это — одна из революционных работ Кандинского?
+                    котиков<span class="dots">...</span> Сколько бы вы на такое
+                    поставили, если бы не знали, что это — одна из революционных
+                    работ Кандинского?
                   </p>
-                  <div class="overlay"></div>
-                </a>
-              </article>
+                </article>
+              </a>
             </li>
+
           </ol>
         </div>
-        <div class="lots__look-more-link">
-          <a href="#">посмотреть больше</a>
-        </div>
+
+        <a class="lots__look-more-link" href="#">посмотреть больше</a>
       </section>
       <section class="about">
         <div class="about__column">
@@ -128,26 +125,25 @@
             <img class="img_logo" src="./images/logo-white.svg" alt="" />
           </div>
           <div class="about__title">
-            <h4 id="about_id">Об аукционе</h4>
+            <h2 id="about_id">Об аукционе</h2>
             <div class="about__text">
-              <p class="first_paragraph_about">
+              <p>
                 Здесь вы не встретите очередное пафосное собрание невероятно
                 дорогого антиквариата. Наши лоты вообще не должны были попасть
                 ни на один аукцион. Потому что кому нужен дневник
                 девочки-подростка или картина, которую может нарисовать даже
                 ребёнок? Кому нужны все эти странные вещи, созданные любителями?
               </p>
-              <p class="secont_paragraph_about">
+              <p>
                 Слишком сложные или, наоборот, слишком простые. Опережающие своё
                 время. В пух и прах растерзанные критиками. Непринятые и
                 непонятые. Когда-то они казались просто неудачными. Но, несмотря
-                <br />
                 на критику, кажущуюся простоту или сложность, сейчас без этих
                 лотов невозможно представить современную культуру. Когда в эти
                 вещи не верил никто, продолжали верить их создатели. И сейчас
                 эти лоты стали культовыми.
               </p>
-              <!-- В макете, в этой секции, почти через каждое слово меняется letter-spacing и с большим разбросом, старший студент сказал, что это косяк макета, поэтому не стал прописывать через каждое слово отдельный span -->
+              <!-- В макете, в этой секции, почти через каждое слово меняется letter-spacing и с большим разбросом, старший студент сказал, что это ошибка макета, поэтому не стал прописывать через каждое слово отдельный span -->
             </div>
           </div>
         </div>
@@ -155,19 +151,15 @@
     </main>
     <footer class="footer">
       <address class="address">
-        <span class="phone_number"
-          ><a href="tel:+99995555555">+9 999 555 5555</a></span
-        >
-        <span class="mail"
-          ><a href="mailto:admin@hipolink.net">info@sobaka.ge</a></span
-        >
-        <span class="street">наб. Принсенграхт 263- 265, Амстердам</span>
+        <a class="phone_number" href="tel:+99995555555">+9 999 555 5555</a>
+        <a class="mail" href="mailto:admin@hipolink.net">info@sobaka.ge</a>
+        <p>наб. Принсенграхт 263- 265, Амстердам</p>
       </address>
-      <menu class="footer_menu">
+      <ul class="footer_menu">
         <li class="main_list"><a class="main_link" href="#">главная</a></li>
         <li><a class="lots_list" href="#lots_id">посмотреть лоты</a></li>
         <li><a class="auction_list" href="#about_id">об аукционе</a></li>
-      </menu>
+      </ul>
       <div class="footer__social-list">
         <ol class="footer__social-list-item">
           <li>
