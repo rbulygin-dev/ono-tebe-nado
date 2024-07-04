@@ -12,11 +12,10 @@
 
   <body>
     <header class="header">
-      <div class="content_header">
         <ul class="header__menu">
-          <li class="main_list"><a class="main_link" href="#">главная</a></li>
-          <li><a class="lots_list" href="#lots_id">посмотреть лоты</a></li>
-          <li><a class="auction_list" href="#about_id">об аукционе</a></li>
+          <li class="menu_list main_list"><a class="main_link" href="#">главная</a></li>
+          <li><a class="menu_list" href="#lots_id">посмотреть лоты</a></li>
+          <li><a class="menu_list" href="#about_id">об аукционе</a></li>
         </ul>
         <div class="header__logo">
           <a class="header__link"
@@ -26,11 +25,10 @@
           /></a>
         </div>
         <address class="address address_header">
-          <a class="phone_number" href="tel:+99995555555">+9 999 555 5555</a>
-          <a class="mail" href="mailto:admin@hipolink.net">info@sobaka.ge</a>
+          <a href="tel:+99995555555">+9 999 555 5555</a>
+          <a href="mailto:admin@hipolink.net">info@sobaka.ge</a>
           <p>наб. Принсенграхт 263- 265, Амстердам</p>
         </address>
-      </div>
     </header>
     <main>
       <section class="cover">
@@ -43,14 +41,14 @@
           <span class="aligned-text_center"
             >те<span class="h_middle_letter_spacing">бе</span></span
           >
-          <span class="aligned-text_right"
-            >н<span class="h_end_letter_spacing">ад</span>о</span
-          >
+          <span class="aligned-text_right" 
+          >н<span class="h_end_letter_spacing">ад</span><span class="end-letter">о</span></span 
+        >
         </h1>
 
         <div class="cover__description">
-          <h2 class="cover__description-text uppercase">
-            Аукцион вещей, <span class="letter-in">в</span>которые никто не
+          <h2 class="uppercase">
+            Аукцион вещей, в которые никто не
             верил
           </h2>
           <button type="button" class="bet-button uppercase">
@@ -60,8 +58,7 @@
       </section>
       <section class="lots">
         <h2 class="uppercase title_section_lots" id="lots_id">Лоты</h2>
-        <div class="lots__card-lit">
-          <ol>
+          <ol class="lots__card-lit">
             <li class="card card_type_film">
               <a class="card-link" href="#">
                 <div class="overlay"></div>
@@ -115,12 +112,12 @@
             </li>
 
           </ol>
-        </div>
+        
 
         <a class="lots__look-more-link" href="#">посмотреть больше</a>
       </section>
       <section class="about">
-        <div class="about__column">
+        
           <div class="about__logo">
             <img class="img_logo" src="./images/logo-white.svg" alt="" />
           </div>
@@ -146,19 +143,19 @@
               <!-- В макете, в этой секции, почти через каждое слово меняется letter-spacing и с большим разбросом, старший студент сказал, что это ошибка макета, поэтому не стал прописывать через каждое слово отдельный span -->
             </div>
           </div>
-        </div>
+        
       </section>
     </main>
     <footer class="footer">
       <address class="address">
-        <a class="phone_number" href="tel:+99995555555">+9 999 555 5555</a>
-        <a class="mail" href="mailto:admin@hipolink.net">info@sobaka.ge</a>
+        <a href="tel:+99995555555">+9 999 555 5555</a>
+        <a href="mailto:admin@hipolink.net">info@sobaka.ge</a>
         <p>наб. Принсенграхт 263- 265, Амстердам</p>
       </address>
       <ul class="footer_menu">
-        <li class="main_list"><a class="main_link" href="#">главная</a></li>
-        <li><a class="lots_list" href="#lots_id">посмотреть лоты</a></li>
-        <li><a class="auction_list" href="#about_id">об аукционе</a></li>
+        <li class="menu_list main_list"><a class="main_link" href="#">главная</a></li>
+        <li><a class="menu_list" href="#lots_id">посмотреть лоты</a></li>
+        <li><a class="menu_list" href="#about_id">об аукционе</a></li>
       </ul>
       <div class="footer__social-list">
         <ol class="footer__social-list-item">

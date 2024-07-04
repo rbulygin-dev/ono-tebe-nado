@@ -4,9 +4,6 @@
 
 .header {
   padding: 92px 24px 92px;
-}
-
-.content_header {
   display: flex; /* Распологаю элементы в строку */
 }
 
@@ -22,17 +19,16 @@
   text-decoration: none; /* Убираю встроенный стиль у ссылки c текстом 'главная' */
 }
 
+.menu_list {
+  letter-spacing: 0.01em;
+}
+
 .main_list {
   list-style: none; /* Убираю встроенный стиль у элемента списка c текстом 'главная' */
 }
 
-.lots_list {
-  letter-spacing: 0.01em;
-}
 
-.auction_list {
-  letter-spacing: 0.01em;
-}
+
 
 .header__logo {
   width: 136px;
@@ -43,22 +39,12 @@
   font-style: normal; /* Тег address по умолчанию содержит стиль italic, отключаю его */
   width: 240.52px;
   text-underline-offset: 4px;
+  display: block; /* Распологаю элементы в строку */
+  line-height: 135%;
 }
 
 .address_header {
   margin: 6px 0 0 192px;
-}
-
-.phone_number,
-.mail {
-  letter-spacing: 0.01em;
-}
-
-.address,
-.mail,
-.phone_number {
-  display: block; /* Распологаю элементы в строку */
-  line-height: 135%;
 }
 
 .cover {
@@ -105,9 +91,14 @@
   letter-spacing: 0.6em;
 }
 
-.aligned-text_right {
-  padding-left: 584px;
+.aligned-text_right { 
+  display: block;
+  text-align: right;
   letter-spacing: 0.6em;
+}
+
+.end-letter {
+  letter-spacing: 0; /* Обнуляю letter-spacing у буквы 'о' */
 }
 
 .h_end_letter_spacing {
@@ -116,10 +107,6 @@
 
 .cover__description {
   padding: 128px 0 0 27px;
-}
-
-.letter-in {
-  letter-spacing: 1.1em;
 }
 
 .cover__description h2 {
@@ -166,8 +153,7 @@
 
 .card {
   z-index: 0;
-  min-width: 334px;
-  max-width: 334px;
+  width: 334px;
   height: 563px;
   background-size: cover;
   position: relative; /*Для оверлея */
@@ -233,12 +219,10 @@
 .about {
   padding: 183px 0 0 24px;
   width: 1052px;
-}
-
-.about__column {
   display: grid;
   grid-template-columns: 359px auto;
 }
+
 
 .about__logo {
   margin-left: 47px;
